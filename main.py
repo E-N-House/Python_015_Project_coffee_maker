@@ -22,19 +22,27 @@ def start_machine():
             print(format_menu(MENU))
         # Checks if user request is in menu
         elif user_request in MENU:
-            # TODO 2. when user orders need to check it has enough to make drink before taking money
+            # When user orders need to check it has enough to make drink before taking money
             # grab the ingredient list for item
             ingredient_list = pull_ingredient_list(user_request)
-            is_enough_resources(ingredient_list=ingredient_list, inventory=resources)
             # compare the ingredient list with the resources
+            if is_enough_resources(ingredient_list=ingredient_list, inventory=resources):
+                # store the data for easy access
+                item_data = MENU[user_request]
+                print(item_data)
+                resources_data = resources
+                print(resources_data)
+                # TODO 3 takes penny nickle dime quarter
+
+
+
+#
 
 
 
 
 start_machine()
 
-# TODO 2. when user orders need to check it has enough to make drink before taking money
-# TODO 3 takes penny nickle dime quarter
 # TODO 2.1 if yes ask for payment and then return change at end
 # TODO 2.2 if not enough money refund
 # TODO 3. make the drink and update the resources
