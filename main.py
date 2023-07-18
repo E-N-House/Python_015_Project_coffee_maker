@@ -1,4 +1,6 @@
-from machine_data import resources
+from machine_data import resources, format_resources, format_unknown
+from coin_data import COINS
+from menu_data import MENU
 
 
 def start_machine():
@@ -8,12 +10,15 @@ def start_machine():
         user_request = input("“What would you like? (espresso/latte/cappuccino):  ").lower()
         # print a report of what it has in stock
         if user_request == "report":
-            # TODO format the resources for printing
-            print(resources)
+            # Format the resources for printing
+            print(format_resources(resources))
             return
         # Turn off the Coffee Machine by entering “off” to the prompt.
         elif user_request == "off":
             is_on = False
+            return
+        elif user_request == "menu":
+            print(MENU)
             return
 
 
