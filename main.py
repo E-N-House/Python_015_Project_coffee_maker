@@ -1,5 +1,5 @@
 from machine_data import resources, format_resources, is_enough_resources
-from coin_data import COINS
+from coin_data import COINS, process_money
 from menu_data import MENU, format_menu, pull_ingredient_list
 
 
@@ -29,10 +29,12 @@ def start_machine():
             if is_enough_resources(ingredient_list=ingredient_list, inventory=resources):
                 # store the data for easy access
                 item_data = MENU[user_request]
-                print(item_data)
+                print(f"item data = {item_data}")
                 resources_data = resources
-                print(resources_data)
+                print(f"resource data = {resources_data}")
                 # TODO 3 takes penny nickle dime quarter
+                process_money()
+
 
 
 

@@ -24,5 +24,5 @@ def is_enough_resources(ingredient_list, inventory):
         if inventory[ingredient] > ingredient_list[ingredient]:
             return True
         else:
-            print(f"Sorry we do not have enough {ingredient}")
+            print(f"“Sorry there is not enough {ingredient}.")
             return False
