@@ -51,6 +51,5 @@ def start_machine():
                 else:
                     print(f"Sorry that's not enough money. Money refunded.")
 
+
 start_machine()
-# TODO 2.2 if not enough money refund
-# TODO 3. make the drink and update the resources
