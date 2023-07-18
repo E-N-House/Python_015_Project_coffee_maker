@@ -21,8 +21,18 @@ def format_unknown(items):
 
 def is_enough_resources(ingredient_list, inventory):
     for ingredient in ingredient_list:
-        if inventory[ingredient] > ingredient_list[ingredient]:
+        if inventory[ingredient] >= ingredient_list[ingredient]:
             return True
         else:
-            print(f"“Sorry there is not enough {ingredient}.")
+            print(f"Sorry there is not enough {ingredient}.")
             return False
+
+
+def update_inventory(payment, ingredient_list):
+    global resources
+    resources['money'] += payment
+    # resources['money'] += payment
+    for ingredient in ingredient_list:
+        resources[ingredient] -= ingredient_list[ingredient]
+        # resources[ingredient] -= ingredient
+    return resources
