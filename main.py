@@ -6,12 +6,12 @@ def start_machine():
     while is_on:
         # Ask the user what they want to do and change it to lowercase
         user_request = input("“What would you like? (espresso/latte/cappuccino):  ").lower()
-        # TODO 1. print a report of what it has in stock
+        # print a report of what it has in stock
         if user_request == "report":
             # TODO format the resources for printing
             print(resources)
             return
-        # TODO Turn off the Coffee Machine by entering “off” to the prompt.
+        # Turn off the Coffee Machine by entering “off” to the prompt.
         elif user_request == "off":
             is_on = False
             return
