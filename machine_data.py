@@ -17,3 +17,12 @@ def format_unknown(items):
     for thing in items:
         message += f"{thing.capitalize()}: {items[thing]}\n"
     print(message)
+
+
+def is_enough_resources(ingredient_list, inventory):
+    for ingredient in ingredient_list:
+        if inventory[ingredient] > ingredient_list[ingredient]:
+            return True
+        else:
+            print(f"Sorry we do not have enough {ingredient}")
+            return False
