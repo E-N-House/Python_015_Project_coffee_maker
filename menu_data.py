@@ -21,8 +21,15 @@ MENU = {
             "coffee": 24,
         },
         "cost": 3.00,
+    },
+    "milk": {
+        "ingredients": {
+            "milk": 50
+        },
+        "cost": 1.00,
     }
 }
+
 
 
 def format_menu(items):

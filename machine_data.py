@@ -31,7 +31,6 @@ def is_enough_resources(ingredient_list, inventory):
 def update_inventory(payment, ingredient_list):
     global resources
     resources['money'] += payment
-    # resources['money'] += payment
     for ingredient in ingredient_list:
         resources[ingredient] -= ingredient_list[ingredient]
         # resources[ingredient] -= ingredient
