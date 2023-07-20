@@ -1,5 +1,5 @@
 from machine_data import resources, format_resources, is_enough_resources, update_inventory
-from coin_data import COINS, process_money
+from coin_data import process_money
 from menu_data import MENU, format_menu, pull_ingredient_list
 
 
