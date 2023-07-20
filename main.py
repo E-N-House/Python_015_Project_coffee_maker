@@ -29,11 +29,8 @@ def start_machine():
             # compare the ingredient list with the resources
             if is_enough_resources(ingredient_list=ingredient_list, inventory=resources):
                 # store the data for easy access
-                item_data = MENU[user_request]
-                item_cost = item_data['cost']
-                print(f"item data = {item_data}")
-                resources_data = resources
-                print(f"resource data = {resources_data}")
+                # item_data = MENU[user_request]
+                item_cost = MENU[user_request]['cost']
                 # prompt user to enter money and save the amount to money variable
                 print(f"Your {user_request} costs ${item_cost}.")
                 money = process_money()
@@ -50,6 +47,7 @@ def start_machine():
                     print(f"Enjoy your {user_request}.")
                 else:
                     print(f"Sorry that's not enough money. Money refunded.")
-
+        else:
+            print(f"Sorry we do not serve '{user_request}'.")
 
 start_machine()
