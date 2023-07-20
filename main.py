@@ -4,6 +4,7 @@ from menu_data import MENU, format_menu, pull_ingredient_list
 
 
 def start_machine():
+    """Starts the coffee machine. Continues prompting until shut down using 'off'"""
     is_on = True
     while is_on:
         # Ask the user what they want to do and change it to lowercase
@@ -49,5 +50,6 @@ def start_machine():
                     print(f"Sorry that's not enough money. Money refunded.")
         else:
             print(f"Sorry we do not serve '{user_request}'.")
+
 
 start_machine()

@@ -42,6 +42,8 @@ def format_menu(items):
 
 
 def pull_ingredient_list(item):
+    """takes in a string and returns the corresponding ingredients dictionary
+    NOTE contains global MENU"""
     global MENU
     ingredient_list = MENU[item]['ingredients']
     return ingredient_list

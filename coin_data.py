@@ -7,6 +7,10 @@ COINS = {
 
 
 def process_money():
+    """prompts user to input the amount of coins they are inserting
+    Calculates the final value of payment and returns payment
+    NOTE has global COINS
+    NOTE contains error handling for non number entries"""
     global COINS
     money = 0
     for coin in COINS:

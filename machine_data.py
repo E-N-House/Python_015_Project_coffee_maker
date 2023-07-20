@@ -20,6 +20,9 @@ def format_unknown(items):
 
 
 def is_enough_resources(ingredient_list, inventory):
+    """takes in ingredient dictionary and inventory dictionary and
+    checks if there is enough inventory to make item
+    returns a boolean"""
     for ingredient in ingredient_list:
         if inventory[ingredient] >= ingredient_list[ingredient]:
             return True
@@ -29,6 +32,9 @@ def is_enough_resources(ingredient_list, inventory):
 
 
 def update_inventory(payment, ingredient_list):
+    """takes in the payment number and ingredient dictionary
+    and returns an updated global resources/inventory
+    NOTE Contains a global resources value"""
     global resources
     resources['money'] += payment
     for ingredient in ingredient_list:
